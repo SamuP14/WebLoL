@@ -1,20 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>League of Legends</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="../src/assets/imgs/tab-logo.png" type="image/png">
 </head>
+
 <body>
     <header id="main-header">
         <div class="header">
-            <img src="assets/imgs/logo.png" class="logo">
+            <img src="assets/imgs/logo.png" class="logo letsgo" id="logo">
+        </div>
+        <div id="loldex">
+            <p class="loading">Loading Data...</p>
+        </div>
+        <div class="pagination">
+            <button id="prevPage"> Prev </button>
+            <button id="nextPage"> Next </button>
+        </div>
+        <div id="champion-popup" class="popup hidden">
+            <div class="popup-content">
+                <span class="close-popup">&times;</span>
+                <div id="champion-info">
+                    <!-- Aquí se mostrará la información del campeón -->
+                </div>
+            </div>
         </div>
     </header>
+    <footer id="main-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>Support Me on Patreon</p>
+                <ul class="social-icons">
+                    <li>
+                        <a href="https://patreon.com/ElreekDev" target="_blank">
+                            <img src="../src/assets/imgs/icons/patreon.png" alt="Patreon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <p>&copy; 2024 ElreekDev. All rights reserved. League of Legends is a trademark of Riot Games, Inc.</p>
+                <ul class="footer-links">
+                    <li><a href="./html/terms.html" target="_blank">Terms of Service</a></li>
+                    <li><a href="./html/privacy.html" target="_blank">Privacy Policy</a></li>
+                    <li><a href="./html/support.html" target="_blank">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <p>Follow me:</p>
+                <ul class="social-icons">
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=61567064514406" target="_blank">
+                            <img src="../src/assets/imgs/icons/facebook.png" alt="Facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/elreekdev" target="_blank">
+                            <img src="../src/assets/imgs/icons/instragram.png" alt="Instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/elreekdev" target="_blank">
+                            <img src="../src/assets/imgs/icons/twitter.png" alt="X">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="./js/script.js"></script>
 </body>
+
 </html>
-
-<!-- https://ddragon.leagueoflegends.com/cdn/13.18.1/img/champion/<nombre del campeón> -->
-
-<!-- "https://ddragon.leagueoflegends.com/cdn/13.18.1/img/champion/" + champion.image -->

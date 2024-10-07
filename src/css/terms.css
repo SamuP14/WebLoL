@@ -1,0 +1,66 @@
+* {
+    cursor: url("../assets/imgs/cursor/cursor_normal.png"), auto;
+}
+
+body {
+    font-family: 'Beaufort', sans-serif; /* Use the same font as the main page */
+    background-color: #2C3338; /* Darker background for a less dazzling effect */
+    color: #E0E0E0; /* Lighter text color for better contrast against the darker background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes the full height */
+}
+
+@font-face {
+    font-family: 'Beaufort';
+    src: url('../assets/fonts/Beaufort-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    background-color: #1E2328; /* Same header background color */
+    color: #A09B8C;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    flex: 1; /* Takes up remaining space */
+    max-width: 800px; /* Limits the width of the content */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #3C3C41; /* Slightly lighter than body background */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #010A13; /* Subtle shadow for depth */
+}
+
+h1, h2 {
+    color: #C89B3C; /* Gold color for headings */
+    margin: 10px 0;
+}
+
+h2 {
+    margin-top: 20px; /* More space before subheadings */
+}
+
+p {
+    line-height: 1.6; /* Improved readability */
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #1E2328; /* Same footer background color */
+    color: #A09B8C;
+    text-align: center;
+    padding: 10px;
+    width: 100%; /* Ensures footer takes full width */
+    position: relative;
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden; /* Hides horizontal scrollbars */
+}
