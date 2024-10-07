@@ -6,7 +6,7 @@ export class ChampView {
         this.loadingMessage = document.querySelector(".loading");
         this.pagination = document.querySelector(".pagination");
         this.currentPage = 0;
-        this.itemsPerPage = 6;
+        this.itemsPerPage = 8;
     }
 
     showLoading() {
