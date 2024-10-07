@@ -31,14 +31,14 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }
 
 header, #loldex, .pagination {
     flex: 1;
-    width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -62,8 +62,6 @@ header, #loldex, .pagination {
     height: 250px;
 }
 
-/* Loldex */
-
 #loldex {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -74,7 +72,6 @@ header, #loldex, .pagination {
 .pagination {
     display: flex;
     justify-content: center;
-    /* Centra los botones */
     margin-top: 20px;
 }
 
@@ -92,17 +89,13 @@ button {
 
 button:hover {
     background-image: linear-gradient(90deg, #C8AA6E, #C89B3C);
-    /* Cambia el orden del gradiente al pasar el mouse */
     transform: translateY(-2px);
-    /* Efecto de elevación al pasar el mouse */
 }
 
 button:disabled {
     background-image: linear-gradient(90deg, #3C3C41, #5B5A56);
     background-color: #7D7D7D;
-    /* Color gris para botones deshabilitados */
     cursor: url("../assets/imgs/cursor/cursor_unavailable.png"), auto;
-    /* Cambia el cursor a 'no permitido' */
 }
 
 .card {
@@ -139,16 +132,16 @@ button:disabled {
 }
 
 .popup {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Superponerse al resto */
+    z-index: 1000;
 }
 
 .popup-content {
@@ -159,17 +152,17 @@ button:disabled {
     width: 80%;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative; /* Para que la "X" esté dentro del contenedor */
+    position: relative;
 }
 
 .close-popup {
     position: absolute;
-    top: 10px; /* Ajusta la posición superior de la "X" */
-    right: 10px; /* Ajusta la posición derecha de la "X" */
+    top: 10px;
+    right: 10px;
     font-size: 24px;
     cursor: pointer;
     color: #C89B3C;
-    font-weight: bold; /* Para hacer la "X" más visible */
+    font-weight: bold;
     cursor: url("../assets/imgs/cursor/cursor_link.png"), auto;
 }
 

@@ -3,14 +3,14 @@
 }
 
 body {
-    font-family: 'Beaufort', sans-serif; /* Use the same font as the main page */
-    background-color: #2C3338; /* Darker background for a less dazzling effect */
-    color: #E0E0E0; /* Lighter text color for better contrast against the darker background */
+    font-family: 'Beaufort', sans-serif;
+    background-color: #2C3338;
+    color: #E0E0E0;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures the body takes the full height */
+    min-height: 100vh;
 }
 
 @font-face {
@@ -21,46 +21,45 @@ body {
 }
 
 header {
-    background-color: #1E2328; /* Same header background color */
+    background-color: #1E2328;
     color: #A09B8C;
     text-align: center;
     padding: 20px;
 }
 
 main {
-    flex: 1; /* Takes up remaining space */
-    max-width: 800px; /* Limits the width of the content */
+    flex: 1;
+    max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #3C3C41; /* Slightly lighter than body background */
+    background-color: #3C3C41;
     border-radius: 5px;
-    box-shadow: 0 2px 5px #010A13; /* Subtle shadow for depth */
+    box-shadow: 0 2px 5px #010A13;
 }
 
 h1, h2 {
-    color: #C89B3C; /* Gold color for headings */
+    color: #C89B3C;
     margin: 10px 0;
 }
 
 h2 {
-    margin-top: 20px; /* More space before subheadings */
+    margin-top: 20px;
 }
 
 p {
-    line-height: 1.6; /* Improved readability */
+    line-height: 1.6;
     margin: 10px 0;
 }
 
 footer {
-    background-color: #1E2328; /* Same footer background color */
+    background-color: #1E2328;
     color: #A09B8C;
     text-align: center;
     padding: 10px;
-    width: 100%; /* Ensures footer takes full width */
+    width: 100%;
     position: relative;
 }
 
-/* Prevent horizontal scrolling */
 html, body {
-    overflow-x: hidden; /* Hides horizontal scrollbars */
+    overflow-x: hidden;
 }

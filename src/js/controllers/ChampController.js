@@ -4,7 +4,7 @@ import { ChampView } from "../views/ChampView.js";
 export class ChampController {
     constructor() {
         this.model = new ChampModel();
-        this.view = new ChampView(this.model); // Pasa el modelo a la vista
+        this.view = new ChampView(this.model);
         document
             .getElementById("logo")
             .addEventListener("click", () => this.init());
