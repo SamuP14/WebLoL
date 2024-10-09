@@ -52,12 +52,16 @@ export class ChampView {
         
         championInfo.innerHTML = `
             <h2>${champion.name}, ${champion.title}</h2>
-            <img src="https://ddragon.leagueoflegends.com/cdn/13.18.1/img/champion/${champion.img}">
+            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg" class="splash">
             <p>
                 <strong>${roleLabel}:</strong> 
                 ${champion.tags.map(tag => `<span class="tag">${tag}</span>`).join(' | ')}
             </p>
-            <p><strong>Description:</strong> ${champion.description}</p>
+            <p>
+                <strong>Type:</strong> 
+                <span class="tag">${champion.partype}</span>
+            </p>
+            <p class="description"><strong>Description:</strong> ${champion.description}</p>
         `;
         
         popup.style.display = "flex";

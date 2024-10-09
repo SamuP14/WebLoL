@@ -19,7 +19,7 @@ export class ChampController {
     async init() {
         this.view.showLoading();
         try {
-            await this.model.loadChampions();
+            await this.model.fetchChampion();
             this.view.hideLoading();
             this.view.displayChampions(this.model.getAllChampions());
             this.view.updatePaginationButtons();
