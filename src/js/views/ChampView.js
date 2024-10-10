@@ -7,6 +7,7 @@ export class ChampView {
         this.pagination = document.querySelector(".pagination");
         this.currentPage = 0;
         this.itemsPerPage = 8;
+        this.currentSkin = 0;
     }
 
     showLoading() {
@@ -49,14 +50,24 @@ export class ChampView {
         const popup = document.getElementById("champion-popup");
         const championInfo = document.getElementById("champion-info");
         const roleLabel = champion.tags.length > 1 ? 'Roles' : 'Role';
+        this.currentSkin = 0;
+        const skinImgs = champion.skins.map(skin => `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_${skin.num}.jpg`)
         
         championInfo.innerHTML = `
             <h2>${champion.name}, ${champion.title}</h2>
-            <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg" class="splash">
-            <p>
+            <div class="skins">
+                <img src="${skinImgs[this.currentSkin]}" class="splash">
+                <button id="prevSkin">&lt--</button>
+                <button id="nextSkin">--&gt</button>
+                <div id="skinNameDisplay">
+                    <strong>Skin:</strong> 
+                    <p class="skinName">${champion.skins[this.currentSkin].name}</p>
+                </div>
+            </div>
+            <div>
                 <strong>${roleLabel}:</strong> 
                 ${champion.tags.map(tag => `<span class="tag">${tag}</span>`).join(' | ')}
-            </p>
+            </div>
             <p>
                 <strong>Type:</strong> 
                 <span class="tag">${champion.partype}</span>
@@ -65,10 +76,27 @@ export class ChampView {
         `;
         
         popup.style.display = "flex";
+
+        document.getElementById("prevSkin").addEventListener("click", () => {
+            this.currentSkin = (this.currentSkin - 1 + skinImgs.length) % skinImgs.length;
+            this.updateSkinImg(skinImgs, champion.skins);
+        });
+
+        document.getElementById("nextSkin").addEventListener("click", () => {
+            this.currentSkin = (this.currentSkin + 1) % skinImgs.length;
+            this.updateSkinImg(skinImgs, champion.skins);
+        });
         
         document.querySelector(".close-popup").addEventListener("click", () => {
             document.getElementById("champion-popup").style.display = "none";
         });
+    }
+
+    updateSkinImg(skinImgs, skins) {
+        const skinImage = document.querySelector('.splash');
+        skinImage.src = skinImgs[this.currentSkin];
+        const skinName = document.querySelector('.skinName');
+        skinName.textContent = skins[this.currentSkin].name;
     }
 
     changePage(direction) {

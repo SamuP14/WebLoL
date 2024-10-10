@@ -162,6 +162,18 @@ button:disabled {
     text-align: justify;
 }
 
+#skinNameDisplay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.skinName {
+    margin-left: 5px;
+    text-transform: capitalize;
+}
+
 .close-popup {
     position: absolute;
     top: 10px;
